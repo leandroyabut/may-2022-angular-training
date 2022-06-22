@@ -19,8 +19,7 @@ export class AppComponent implements OnInit{
 
 	constructor(private http: HttpClient,
               private clipboard: ClipboardService,
-              private toastr: ToastrService) {
-	}
+              private toastr: ToastrService) {}
 
 	ngOnInit(): void {
 		this.loadFact();
