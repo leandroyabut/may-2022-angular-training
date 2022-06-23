@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="card my-5 col-6 mx-auto">
+    <div class="card-body">
+      <h4>Sign Up 2</h4>
+      <form [formGroup]="signUpForm" class="mt-4">
+
+        <div class="form-floating my-2">
+          <input type="text"
+                 id="username"
+                 formControlName="username"
+                 class="form-control"
+                 placeholder="Username"/>
+          <label class="form-label"
+                 for="username">Username</label>
+        </div>
+
+        <div *ngIf="signUpForm.controls['username'].errors && signUpForm.controls['username'].dirty" class="small text-danger">
+          <div *ngIf="signUpForm.controls['username'].errors['pattern']">Username is not valid</div>
+          <div *ngIf="signUpForm.controls['username'].errors['required']">Username is required</div>
+          <div *ngIf="signUpForm.controls['username'].errors['minlength']">Username must be at least 6 characters</div>
+        </div>
+
+        <div class="my-3 text-center">
+          <button type="submit"
+                  [disabled]="signUpForm.invalid"
+                  class="btn btn-primary">Sign Up</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -4,6 +4,7 @@ import {HomePageComponent} from './home-page/home-page.component';
 import {UselessFactsComponent} from './useless-facts/useless-facts.component';
 import {LoginPageComponent} from './login-page/login-page.component';
 import {SignUpPageComponent} from './sign-up-page/sign-up-page.component';
+import {SignUpPage2Component} from './sign-up-page2/sign-up-page2.component';
 
 const routes: Routes = [
   {
@@ -22,6 +23,10 @@ const routes: Routes = [
   {
     path: 'sign-up',
     component: SignUpPageComponent
+  },
+  {
+    path: 'sign-up2',
+    component: SignUpPage2Component
   }
 ];
 

@@ -3,7 +3,7 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import {FormsModule} from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
 import {ClipboardModule} from 'ngx-clipboard';
 import {ToastrModule} from 'ngx-toastr';
@@ -12,6 +12,7 @@ import { UselessFactsComponent } from './useless-facts/useless-facts.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { LoginPageComponent } from './login-page/login-page.component';
 import { SignUpPageComponent } from './sign-up-page/sign-up-page.component';
+import { SignUpPage2Component } from './sign-up-page2/sign-up-page2.component';
 
 @NgModule({
 	declarations: [
@@ -19,12 +20,14 @@ import { SignUpPageComponent } from './sign-up-page/sign-up-page.component';
   UselessFactsComponent,
   HomePageComponent,
   LoginPageComponent,
-  SignUpPageComponent
+  SignUpPageComponent,
+  SignUpPage2Component
 	],
 	imports: [
 		BrowserModule,
 		AppRoutingModule,
 		FormsModule,
+    ReactiveFormsModule,
 		HttpClientModule,
 		ClipboardModule,
 		BrowserAnimationsModule,
