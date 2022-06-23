@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import {UselessFact} from './useless-fact.interface';
+import {UselessFact} from '../interfaces/useless-fact.interface';
 
 @Injectable({
   providedIn: 'root'

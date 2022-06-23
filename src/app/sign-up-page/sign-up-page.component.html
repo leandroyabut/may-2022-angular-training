@@ -1,0 +1,89 @@
+<div class="container">
+  <div class="card my-5 col-6 mx-auto">
+    <div class="card-body">
+      <h4>Sign Up</h4>
+      <form #signUpForm="ngForm" class="mt-4">
+        <div class="form-floating my-2">
+          <input type="text"
+                 id="username"
+                 name="username"
+                 class="form-control"
+                 placeholder="Username"
+
+                 [(ngModel)]="request.username"
+                 #username="ngModel"
+
+                 pattern="^[A-Za-z0-9_]+$"
+                 required
+                 minlength="6"
+
+                 />
+          <label class="form-label"
+                 for="username">Username</label>
+        </div>
+        <div *ngIf="username.errors && username.dirty" class="small text-danger">
+          <span *ngIf="username.errors['pattern']">Username is not valid</span>
+          <span *ngIf="username.errors['required']">Username is required</span>
+          <span *ngIf="username.errors['minlength']">Username must be at least 6 characters</span>
+        </div>
+        <div class="form-floating my-2">
+          <input type="text"
+                 id="email"
+                 name="email"
+                 class="form-control"
+                 placeholder="Email"/>
+          <label class="form-label"
+                 for="email">Email</label>
+        </div>
+        <div class="small text-danger">
+          Email is not valid
+        </div>
+        <div class="form-floating my-2">
+          <input type="password"
+                 id="password"
+                 name="password"
+                 class="form-control"
+                 placeholder="Password"
+
+                 [(ngModel)]="request.password"
+                 #password="ngModel"
+
+                 required
+                 minlength="8"
+                 />
+          <label class="form-label"
+                 for="password">Password</label>
+        </div>
+        <div *ngIf="password.errors && password.dirty" class="small text-danger">
+          <span *ngIf="password.errors['required']">Password is required</span>
+          <span *ngIf="password.errors['minlength']">Password must be at least 8 characters</span>
+        </div>
+        <div class="form-floating my-2">
+          <input type="password"
+                 id="confirmPassword"
+                 name="confirmPassword"
+                 class="form-control"
+                 placeholder="Confirm Password"
+
+                 [(ngModel)]="request.confirmPassword"
+                 #confirmPassword="ngModel"
+
+                 [pattern]="password.value"
+                 required
+                />
+          <label class="form-label"
+                 for="confirmPassword">Confirm Password</label>
+        </div>
+        <div *ngIf="confirmPassword.errors && confirmPassword.dirty" class="small text-danger">
+          <span *ngIf="confirmPassword.errors['required']">Please confirm your password.</span>
+          <span *ngIf="confirmPassword.errors['pattern']">Passwords do not match.</span>
+        </div>
+
+        <div class="my-3 text-center">
+          <button type="submit"
+                  class="btn btn-primary">Sign Up</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

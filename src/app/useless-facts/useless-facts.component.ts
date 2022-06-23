@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import {UselessFact} from '../useless-fact.interface';
+import {UselessFact} from '../interfaces/useless-fact.interface';
 import {HttpClient} from '@angular/common/http';
 import {ClipboardService} from 'ngx-clipboard';
 import {ToastrService} from 'ngx-toastr';
-import {UselessFactsService} from '../useless-facts.service';
+import {UselessFactsService} from '../services/useless-facts.service';
 
 @Component({
 	selector: 'app-useless-facts',

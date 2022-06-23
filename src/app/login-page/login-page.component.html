@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="card my-5 col-6 mx-auto">
+    <div class="card-body">
+      <h4>Login</h4>
+      <form class="mt-4" (submit)="login()">
+        <div class="form-floating my-2">
+          <input type="text"
+                 id="username"
+                 name="username"
+                 class="form-control"
+                 [(ngModel)]="authRequest.username"
+                 placeholder="Username"/>
+          <label class="form-label"
+                 for="username">Username</label>
+        </div>
+        <div class="form-floating my-2">
+          <input type="password"
+                 id="password"
+                 name="password"
+                 class="form-control"
+                 [(ngModel)]="authRequest.password"
+                 placeholder="Password"/>
+          <label class="form-label"
+                 for="password">Password</label>
+        </div>
+
+        <div class="my-3 text-center">
+          <button type="submit"
+                  class="btn btn-primary">Login</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
