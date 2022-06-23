@@ -12,33 +12,11 @@ import {ToastrService} from 'ngx-toastr';
 })
 export class AppComponent implements OnInit{
 
-	apiUrl = 'https://uselessfacts.jsph.pl/random.json?language=en';
-	uselessFact: UselessFact = {
-		id: '', language: '', permalink: '', source: '', source_url: '', text: ''
-	};
+  constructor() {
+  }
 
-	constructor(private http: HttpClient,
-              private clipboard: ClipboardService,
-              private toastr: ToastrService) {}
-
-	ngOnInit(): void {
-		this.loadFact();
-	}
-
-	loadFact() {
-		this.http.get<UselessFact>(this.apiUrl)
-			.subscribe(
-				data => {
-					this.uselessFact = data;
-				}
-			);
-	}
-
-	copyFactUrl() {
-		this.clipboard.copy(this.uselessFact.permalink);
-		this.toastr.success('Copied useless fact to clipboard!');
-	}
-
+  ngOnInit() {
+  }
 
 
 }

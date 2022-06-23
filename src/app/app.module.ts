@@ -8,10 +8,14 @@ import {HttpClientModule} from '@angular/common/http';
 import {ClipboardModule} from 'ngx-clipboard';
 import {ToastrModule} from 'ngx-toastr';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { UselessFactsComponent } from './useless-facts/useless-facts.component';
+import { HomePageComponent } from './home-page/home-page.component';
 
 @NgModule({
 	declarations: [
-		AppComponent
+		AppComponent,
+  UselessFactsComponent,
+  HomePageComponent
 	],
 	imports: [
 		BrowserModule,
